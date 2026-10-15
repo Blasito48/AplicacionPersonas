@@ -31,10 +31,9 @@ namespace AplicacionPersonas
             TxtNombre.Enabled = true;
             TxtTelefono.Enabled = true;
             //limpiar los texbox
-            TxtID.Text= string.Empty;
+            TxtID.Text = string.Empty;
             TxtNombre.Text = "";
             TxtTelefono.Clear();
-
             //envio foco del cursor
             TxtID.Focus();
         }
@@ -54,6 +53,28 @@ namespace AplicacionPersonas
             TxtTelefono.Enabled = false;
             //envio foco del cursor
             BtnNuevo.Focus();
+        }
+
+        private void BtnSalir_Click(object sender, EventArgs e)
+        {
+            //cerrar un formulario
+            this.Close();
+        }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            //las cajas de texto almacenan en la propiedad TEXT
+            //valido si digitaron datos
+            if (TxtID.Text == "" || TxtNombre.Text == "" || TxtTelefono.Text == "")
+            {
+                MessageBox.Show("Algunos Datos Estan Vacios Verifique y Vuelva a Guardar", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Datos Guardados", "Felicitaciones!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BtnDeshacer_Click(sender, e);
+            }
+
         }
     }
 }
