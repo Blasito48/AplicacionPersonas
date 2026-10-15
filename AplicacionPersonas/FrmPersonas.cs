@@ -16,5 +16,43 @@ namespace AplicacionPersonas
         {
             InitializeComponent();
         }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+            //lo que esta habilita se deshabilita
+            BtnNuevo.Enabled = false;
+            BtnEditar.Enabled = false;
+            BtnEliminar.Enabled = false;
+            BtnSalir.Enabled = false;
+            //lo que esta deshabilitado se habilita
+            BtnGuardar.Enabled = true;
+            BtnDeshacer.Enabled = true;
+            TxtID.Enabled = true;
+            TxtNombre.Enabled = true;
+            TxtTelefono.Enabled = true;
+            //limpiar los texbox
+            TxtID.Text= string.Empty;
+            TxtNombre.Text = "";
+            TxtTelefono.Clear();
+            //envio foco del cursor
+            TxtID.Focus();
+        }
+
+        private void BtnDeshacer_Click(object sender, EventArgs e)
+        {
+            //lo que esta deshabilitado se habilita
+            BtnNuevo.Enabled = true;
+            BtnEditar.Enabled = true;
+            BtnEliminar.Enabled = true;
+            BtnSalir.Enabled = true;
+            //lo que esta habilitado se deshabilita
+            BtnGuardar.Enabled = false;
+            BtnDeshacer.Enabled = false;
+            TxtID.Enabled = false;
+            TxtNombre.Enabled = false;
+            TxtTelefono.Enabled = false;
+            //envio foco del cursor
+            BtnNuevo.Focus();
+        }
     }
 }

@@ -51,19 +51,21 @@
             this.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnNuevo.Location = new System.Drawing.Point(9, 168);
             this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(93, 88);
+            this.BtnNuevo.Size = new System.Drawing.Size(93, 103);
             this.BtnNuevo.TabIndex = 0;
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnNuevo.UseVisualStyleBackColor = true;
+            this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
             // BtnGuardar
             // 
+            this.BtnGuardar.Enabled = false;
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnGuardar.Location = new System.Drawing.Point(113, 168);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(93, 88);
+            this.BtnGuardar.Size = new System.Drawing.Size(93, 103);
             this.BtnGuardar.TabIndex = 1;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -71,15 +73,17 @@
             // 
             // BtnDeshacer
             // 
+            this.BtnDeshacer.Enabled = false;
             this.BtnDeshacer.Image = ((System.Drawing.Image)(resources.GetObject("BtnDeshacer.Image")));
             this.BtnDeshacer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnDeshacer.Location = new System.Drawing.Point(216, 168);
             this.BtnDeshacer.Name = "BtnDeshacer";
-            this.BtnDeshacer.Size = new System.Drawing.Size(93, 88);
+            this.BtnDeshacer.Size = new System.Drawing.Size(93, 103);
             this.BtnDeshacer.TabIndex = 2;
             this.BtnDeshacer.Text = "Deshacer";
             this.BtnDeshacer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnDeshacer.UseVisualStyleBackColor = true;
+            this.BtnDeshacer.Click += new System.EventHandler(this.BtnDeshacer_Click);
             // 
             // BtnEditar
             // 
@@ -87,7 +91,7 @@
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnEditar.Location = new System.Drawing.Point(324, 168);
             this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(93, 88);
+            this.BtnEditar.Size = new System.Drawing.Size(93, 103);
             this.BtnEditar.TabIndex = 3;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -99,7 +103,7 @@
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnEliminar.Location = new System.Drawing.Point(432, 168);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(93, 88);
+            this.BtnEliminar.Size = new System.Drawing.Size(93, 103);
             this.BtnEliminar.TabIndex = 4;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -111,7 +115,7 @@
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.BtnSalir.Location = new System.Drawing.Point(541, 168);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(93, 88);
+            this.BtnSalir.Size = new System.Drawing.Size(93, 103);
             this.BtnSalir.TabIndex = 5;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -128,6 +132,7 @@
             // 
             // TxtID
             // 
+            this.TxtID.Enabled = false;
             this.TxtID.Location = new System.Drawing.Point(103, 12);
             this.TxtID.Name = "TxtID";
             this.TxtID.Size = new System.Drawing.Size(155, 26);
@@ -135,6 +140,7 @@
             // 
             // TxtNombre
             // 
+            this.TxtNombre.Enabled = false;
             this.TxtNombre.Location = new System.Drawing.Point(103, 58);
             this.TxtNombre.Name = "TxtNombre";
             this.TxtNombre.Size = new System.Drawing.Size(294, 26);
@@ -151,6 +157,7 @@
             // 
             // TxtTelefono
             // 
+            this.TxtTelefono.Enabled = false;
             this.TxtTelefono.Location = new System.Drawing.Point(103, 116);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(155, 26);
