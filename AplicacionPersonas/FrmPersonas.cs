@@ -34,6 +34,7 @@ namespace AplicacionPersonas
             TxtID.Text= string.Empty;
             TxtNombre.Text = "";
             TxtTelefono.Clear();
+
             //envio foco del cursor
             TxtID.Focus();
         }
