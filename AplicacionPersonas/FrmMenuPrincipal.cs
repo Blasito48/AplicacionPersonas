@@ -33,5 +33,11 @@ namespace AplicacionPersonas
                 Application.Exit();
             }
         }
+
+        private void nuevaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmPersonas f = new FrmPersonas();
+            f.ShowDialog();
+        }
     }
 }
