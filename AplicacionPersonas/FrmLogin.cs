@@ -29,6 +29,14 @@ namespace AplicacionPersonas
 
         private void BtnIniciar_Click(object sender, EventArgs e)
         {
+            if (ClaseFunciones.Func_Conectar())
+            {
+                MessageBox.Show("Conectado a MySQL", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Hubo una Excepcion : "+ClaseFunciones.excepcion, "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             string user = TxtUsuario.Text;
             string pass = TxtPassword.Text;
             if (user == "Admin" && pass == "12345")
@@ -59,7 +67,7 @@ namespace AplicacionPersonas
                 Application.Exit();
             }
 
-            
+
         }
     }
 }
