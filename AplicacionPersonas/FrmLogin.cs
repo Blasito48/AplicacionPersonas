@@ -31,7 +31,7 @@ namespace AplicacionPersonas
         {
             if (ClaseFunciones.Func_Conectar())
             {
-                MessageBox.Show("Conectado a MySQL", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Conectado a MySQL ", "Felicidades!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
