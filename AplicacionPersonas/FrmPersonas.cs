@@ -71,8 +71,17 @@ namespace AplicacionPersonas
             }
             else
             {
-                MessageBox.Show("Datos Guardados", "Felicitaciones!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                BtnDeshacer_Click(sender, e);
+                //llamo la funcion insertar
+                if (ClaseFunciones.Func_Insertar(Convert.ToInt64(TxtID.Text),TxtNombre.Text,TxtTelefono.Text))
+                {
+                    MessageBox.Show("Datos Guardados", "Felicitaciones!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    BtnDeshacer_Click(sender, e);
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un Error, Excepcion: "+ClaseFunciones.excepcion, "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                
             }
 
         }
