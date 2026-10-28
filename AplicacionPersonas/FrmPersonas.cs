@@ -75,6 +75,7 @@ namespace AplicacionPersonas
                 if (ClaseFunciones.Func_Insertar(Convert.ToInt64(TxtID.Text),TxtNombre.Text,TxtTelefono.Text))
                 {
                     MessageBox.Show("Datos Guardados", "Felicitaciones!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DgvPersonas.DataSource = ClaseFunciones.Func_TraerTodo();
                     BtnDeshacer_Click(sender, e);
                 }
                 else
@@ -89,6 +90,25 @@ namespace AplicacionPersonas
         private void FrmPersonas_Load(object sender, EventArgs e)
         {
             DgvPersonas.DataSource = ClaseFunciones.Func_TraerTodo();
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            //capturo el ID y el nombre del DataGridView
+            long id = Convert.ToInt64(DgvPersonas.CurrentRow.Cells["id_persona"].Value);
+            string name = DgvPersonas.CurrentRow.Cells["nombre"].Value.ToString();
+            //pregunto si va elminar
+            DialogResult rpta = new DialogResult();
+            rpta = MessageBox.Show("Desea Eliminar el ID: " + id + " Nombre: " + name, "Advertencia!!!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (rpta == DialogResult.OK)
+            {
+                //llamo la funcion eliminar y mando el id como parametro
+                if (ClaseFunciones.Func_Eliminar(id))
+                {
+                    MessageBox.Show("Persona Eliminada", "Felicitaciones!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DgvPersonas.DataSource = ClaseFunciones.Func_TraerTodo();
+                }
+            }
         }
     }
 }

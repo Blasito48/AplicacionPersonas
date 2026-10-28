@@ -92,5 +92,32 @@ namespace AplicacionPersonas
                 return dt;
             }
         }
+        //funcion Elminar
+        //parametros: id
+        //retorno: true o false
+        public static bool Func_Eliminar(long id)
+        {
+            try
+            {
+                //creo la conexion con su cadena de conexion    
+                MySqlConnection con = new MySqlConnection(cadena);
+                //creo la consulta SQL
+                string Sql = "Delete From tbl_persona Where id_persona="+id;
+                //creo el comando con su consulta SQL y su conexion
+                MySqlCommand cmd = new MySqlCommand(Sql, con);
+                //abro la conexion
+                con.Open();
+                //ejecuto la consulta SQL con el comando
+                cmd.ExecuteNonQuery();
+                //cierro la conexion
+                con.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                excepcion = e.ToString();
+                return false;
+            }
+        }
     }
 }
