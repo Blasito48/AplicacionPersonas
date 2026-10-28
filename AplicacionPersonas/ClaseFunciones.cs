@@ -92,6 +92,45 @@ namespace AplicacionPersonas
                 return dt;
             }
         }
+        //Funcion Buscar ID
+        //parametros: ID
+        //retorna: true si ya existe
+        public static bool Func_BuscarID( long id)
+        {
+            //creo una tabla vacia
+            DataTable dt = new DataTable();
+            try
+            {
+                //creo la conexion con su cadena de conexion    
+                MySqlConnection con = new MySqlConnection(cadena);
+                //creo la consulta SQL
+                string Sql = "Select * From tbl_persona Where id_persona="+id;
+                //creo el comando con su consulta SQL y su conexion
+                MySqlCommand cmd = new MySqlCommand(Sql, con);
+                //abro la conexion
+                con.Open();
+                //crea un DataReader en Memoria
+                MySqlDataReader dr = cmd.ExecuteReader();
+                //cargo la tabla con el DataReader
+                dt.Load(dr);
+                //cierro la conexion
+                con.Close();
+                //cuento las filas del DataTable
+                if (dt.Rows.Count >=1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception e)
+            {
+                excepcion = e.ToString();
+                return false;
+            }
+        }
         //funcion Elminar
         //parametros: id
         //retorno: true o false
@@ -103,6 +142,33 @@ namespace AplicacionPersonas
                 MySqlConnection con = new MySqlConnection(cadena);
                 //creo la consulta SQL
                 string Sql = "Delete From tbl_persona Where id_persona="+id;
+                //creo el comando con su consulta SQL y su conexion
+                MySqlCommand cmd = new MySqlCommand(Sql, con);
+                //abro la conexion
+                con.Open();
+                //ejecuto la consulta SQL con el comando
+                cmd.ExecuteNonQuery();
+                //cierro la conexion
+                con.Close();
+                return true;
+            }
+            catch (Exception e)
+            {
+                excepcion = e.ToString();
+                return false;
+            }
+        }
+        //funcion Editar
+        //parametros: id,nombre,telefono
+        //retorno: true o false
+        public static bool Func_Editar(long id, string name, string tel)
+        {
+            try
+            {
+                //creo la conexion con su cadena de conexion    
+                MySqlConnection con = new MySqlConnection(cadena);
+                //creo la consulta SQL
+                string Sql = "update tbl_persona set nombre='"+name + "', telefono='" + tel + "' Where id_persona="+id;
                 //creo el comando con su consulta SQL y su conexion
                 MySqlCommand cmd = new MySqlCommand(Sql, con);
                 //abro la conexion

@@ -71,18 +71,45 @@ namespace AplicacionPersonas
             }
             else
             {
-                //llamo la funcion insertar
-                if (ClaseFunciones.Func_Insertar(Convert.ToInt64(TxtID.Text),TxtNombre.Text,TxtTelefono.Text))
+                if (TxtID.Enabled == true)
                 {
-                    MessageBox.Show("Datos Guardados", "Felicitaciones!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    DgvPersonas.DataSource = ClaseFunciones.Func_TraerTodo();
-                    BtnDeshacer_Click(sender, e);
+                    //Busco si el ID Existe
+                    if (ClaseFunciones.Func_BuscarID(Convert.ToInt64(TxtID.Text)))
+                    {
+                        MessageBox.Show("ID ya Existe en la base de datos", "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        TxtID.Focus();
+                    }
+                    else
+                    {
+                        //llamo la funcion insertar
+                        if (ClaseFunciones.Func_Insertar(Convert.ToInt64(TxtID.Text), TxtNombre.Text, TxtTelefono.Text))
+                        {
+                            MessageBox.Show("Datos Guardados", "Felicitaciones!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            DgvPersonas.DataSource = ClaseFunciones.Func_TraerTodo();
+                            BtnDeshacer_Click(sender, e);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Hubo un Error, Excepcion: " + ClaseFunciones.excepcion, "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Hubo un Error, Excepcion: "+ClaseFunciones.excepcion, "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //llamo la funcion Editar
+                    if (ClaseFunciones.Func_Editar(Convert.ToInt64(TxtID.Text), TxtNombre.Text, TxtTelefono.Text))
+                    {
+                        MessageBox.Show("Persona Editada", "Felicitaciones!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        DgvPersonas.DataSource = ClaseFunciones.Func_TraerTodo();
+                        BtnDeshacer_Click(sender, e);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hubo un Error, Excepcion: " + ClaseFunciones.excepcion, "Error!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                
+
+
             }
 
         }
@@ -109,6 +136,25 @@ namespace AplicacionPersonas
                     DgvPersonas.DataSource = ClaseFunciones.Func_TraerTodo();
                 }
             }
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            TxtID.Text = DgvPersonas.CurrentRow.Cells["id_persona"].Value.ToString();
+            TxtNombre.Text = DgvPersonas.CurrentRow.Cells["nombre"].Value.ToString();
+            TxtTelefono.Text = DgvPersonas.CurrentRow.Cells["telefono"].Value.ToString();
+            //lo que esta habilita se deshabilita
+            BtnNuevo.Enabled = false;
+            BtnEditar.Enabled = false;
+            BtnEliminar.Enabled = false;
+            BtnSalir.Enabled = false;
+            //lo que esta deshabilitado se habilita
+            BtnGuardar.Enabled = true;
+            BtnDeshacer.Enabled = true;
+            TxtNombre.Enabled = true;
+            TxtTelefono.Enabled = true;
+            //envio foco del cursor
+            TxtNombre.Focus();
         }
     }
 }
