@@ -85,5 +85,10 @@ namespace AplicacionPersonas
             }
 
         }
+
+        private void FrmPersonas_Load(object sender, EventArgs e)
+        {
+            DgvPersonas.DataSource = ClaseFunciones.Func_TraerTodo();
+        }
     }
 }

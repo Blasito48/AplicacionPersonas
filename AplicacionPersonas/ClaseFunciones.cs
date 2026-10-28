@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -57,6 +59,37 @@ namespace AplicacionPersonas
             {
                 excepcion = e.ToString();
                 return false;
+            }
+        }
+        //Funcion Traer Todos los Datos
+        //parametros: Ninguno
+        //retorna: DataTable
+        public static DataTable Func_TraerTodo()
+        {
+            //creo una tabla vacia
+            DataTable dt = new DataTable();
+            try
+            {
+                //creo la conexion con su cadena de conexion    
+                MySqlConnection con = new MySqlConnection(cadena);
+                //creo la consulta SQL
+                string Sql = "Select * From tbl_persona;";
+                //creo el comando con su consulta SQL y su conexion
+                MySqlCommand cmd = new MySqlCommand(Sql, con);
+                //abro la conexion
+                con.Open();
+                //crea un DataReader en Memoria
+                MySqlDataReader dr = cmd.ExecuteReader();
+                //cargo la tabla con el DataReader
+                dt.Load(dr);
+                //cierro la conexion
+                con.Close();
+                return dt;
+            }
+            catch (Exception e)
+            {
+                excepcion = e.ToString();
+                return dt;
             }
         }
     }

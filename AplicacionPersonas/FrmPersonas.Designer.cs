@@ -49,9 +49,10 @@
             // 
             this.BtnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("BtnNuevo.Image")));
             this.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnNuevo.Location = new System.Drawing.Point(9, 168);
+            this.BtnNuevo.Location = new System.Drawing.Point(8, 134);
+            this.BtnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnNuevo.Name = "BtnNuevo";
-            this.BtnNuevo.Size = new System.Drawing.Size(93, 103);
+            this.BtnNuevo.Size = new System.Drawing.Size(83, 82);
             this.BtnNuevo.TabIndex = 0;
             this.BtnNuevo.Text = "Nuevo";
             this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -63,9 +64,10 @@
             this.BtnGuardar.Enabled = false;
             this.BtnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("BtnGuardar.Image")));
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnGuardar.Location = new System.Drawing.Point(113, 168);
+            this.BtnGuardar.Location = new System.Drawing.Point(100, 134);
+            this.BtnGuardar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(93, 103);
+            this.BtnGuardar.Size = new System.Drawing.Size(83, 82);
             this.BtnGuardar.TabIndex = 1;
             this.BtnGuardar.Text = "Guardar";
             this.BtnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -77,9 +79,10 @@
             this.BtnDeshacer.Enabled = false;
             this.BtnDeshacer.Image = ((System.Drawing.Image)(resources.GetObject("BtnDeshacer.Image")));
             this.BtnDeshacer.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnDeshacer.Location = new System.Drawing.Point(216, 168);
+            this.BtnDeshacer.Location = new System.Drawing.Point(192, 134);
+            this.BtnDeshacer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDeshacer.Name = "BtnDeshacer";
-            this.BtnDeshacer.Size = new System.Drawing.Size(93, 103);
+            this.BtnDeshacer.Size = new System.Drawing.Size(83, 82);
             this.BtnDeshacer.TabIndex = 2;
             this.BtnDeshacer.Text = "Deshacer";
             this.BtnDeshacer.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -90,9 +93,10 @@
             // 
             this.BtnEditar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEditar.Image")));
             this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnEditar.Location = new System.Drawing.Point(324, 168);
+            this.BtnEditar.Location = new System.Drawing.Point(288, 134);
+            this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEditar.Name = "BtnEditar";
-            this.BtnEditar.Size = new System.Drawing.Size(93, 103);
+            this.BtnEditar.Size = new System.Drawing.Size(83, 82);
             this.BtnEditar.TabIndex = 3;
             this.BtnEditar.Text = "Editar";
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -102,9 +106,10 @@
             // 
             this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
             this.BtnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnEliminar.Location = new System.Drawing.Point(432, 168);
+            this.BtnEliminar.Location = new System.Drawing.Point(384, 134);
+            this.BtnEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(93, 103);
+            this.BtnEliminar.Size = new System.Drawing.Size(83, 82);
             this.BtnEliminar.TabIndex = 4;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -114,9 +119,10 @@
             // 
             this.BtnSalir.Image = ((System.Drawing.Image)(resources.GetObject("BtnSalir.Image")));
             this.BtnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnSalir.Location = new System.Drawing.Point(541, 168);
+            this.BtnSalir.Location = new System.Drawing.Point(481, 134);
+            this.BtnSalir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(93, 103);
+            this.BtnSalir.Size = new System.Drawing.Size(83, 82);
             this.BtnSalir.TabIndex = 5;
             this.BtnSalir.Text = "Salir";
             this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -126,51 +132,54 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 15);
+            this.label1.Location = new System.Drawing.Point(12, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 20);
+            this.label1.Size = new System.Drawing.Size(20, 16);
             this.label1.TabIndex = 6;
             this.label1.Text = "ID";
             // 
             // TxtID
             // 
             this.TxtID.Enabled = false;
-            this.TxtID.Location = new System.Drawing.Point(103, 12);
+            this.TxtID.Location = new System.Drawing.Point(92, 10);
+            this.TxtID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtID.Name = "TxtID";
-            this.TxtID.Size = new System.Drawing.Size(155, 26);
+            this.TxtID.Size = new System.Drawing.Size(138, 22);
             this.TxtID.TabIndex = 7;
             // 
             // TxtNombre
             // 
             this.TxtNombre.Enabled = false;
-            this.TxtNombre.Location = new System.Drawing.Point(103, 58);
+            this.TxtNombre.Location = new System.Drawing.Point(92, 46);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNombre.Name = "TxtNombre";
-            this.TxtNombre.Size = new System.Drawing.Size(294, 26);
+            this.TxtNombre.Size = new System.Drawing.Size(262, 22);
             this.TxtNombre.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 64);
+            this.label2.Location = new System.Drawing.Point(12, 51);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 8;
             this.label2.Text = "Nombre";
             // 
             // TxtTelefono
             // 
             this.TxtTelefono.Enabled = false;
-            this.TxtTelefono.Location = new System.Drawing.Point(103, 116);
+            this.TxtTelefono.Location = new System.Drawing.Point(92, 93);
+            this.TxtTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtTelefono.Name = "TxtTelefono";
-            this.TxtTelefono.Size = new System.Drawing.Size(155, 26);
+            this.TxtTelefono.Size = new System.Drawing.Size(138, 22);
             this.TxtTelefono.TabIndex = 11;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 119);
+            this.label3.Location = new System.Drawing.Point(12, 95);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 20);
+            this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "Telefono";
             // 
@@ -179,19 +188,20 @@
             this.DgvPersonas.AllowUserToAddRows = false;
             this.DgvPersonas.AllowUserToDeleteRows = false;
             this.DgvPersonas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvPersonas.Location = new System.Drawing.Point(9, 277);
+            this.DgvPersonas.Location = new System.Drawing.Point(8, 222);
+            this.DgvPersonas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DgvPersonas.Name = "DgvPersonas";
             this.DgvPersonas.ReadOnly = true;
             this.DgvPersonas.RowHeadersWidth = 62;
             this.DgvPersonas.RowTemplate.Height = 28;
-            this.DgvPersonas.Size = new System.Drawing.Size(625, 262);
+            this.DgvPersonas.Size = new System.Drawing.Size(556, 210);
             this.DgvPersonas.TabIndex = 12;
             // 
             // FrmPersonas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 551);
+            this.ClientSize = new System.Drawing.Size(569, 441);
             this.ControlBox = false;
             this.Controls.Add(this.DgvPersonas);
             this.Controls.Add(this.TxtTelefono);
@@ -206,9 +216,11 @@
             this.Controls.Add(this.BtnDeshacer);
             this.Controls.Add(this.BtnGuardar);
             this.Controls.Add(this.BtnNuevo);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmPersonas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Gestion Personas";
+            this.Load += new System.EventHandler(this.FrmPersonas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvPersonas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
